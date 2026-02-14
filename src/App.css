@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
 * {
   box-sizing: border-box;
   color: black;
@@ -5,9 +7,23 @@
 
 body {
   margin: 0;
-  overflow: hidden;
+  background-color: var(--lightprimary);
   font-family: "Poppins", sans-serif;
-  background: #f4efe9;
+}
+
+/* HEADER */
+
+.landscape .logo{
+ height: 20%;
+  width: auto;
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 2px;
+  background-color: var(--lightprimary);
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 /* FULL SCREEN HORIZONTAL */
@@ -15,22 +31,24 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .slider {
   display: flex;
-  height: 100%;
+  flex: 1;
   transition: transform 1s ease-in-out;
 }
 
 /* Each section = full screen */
 .section {
   min-width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding: 3vh 4vw;
-
   display: grid;
   gap: 2vh;
+  background-color: var(--lightprimary);
 }
 
 /* CATEGORY */
@@ -38,52 +56,124 @@ body {
   background: white;
   border-radius: 20px;
   padding: 2vh 2vw;
-
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-.category h2 {
+.catname{
+font-family: "Roboto Slab", serif;
+  font-weight: 700;
+   color: #333;
   text-align: center;
-  font-size: clamp(1rem, 2vw, 2.5rem);
-  margin-bottom: 1vh;
+  font-size: clamp(1.2rem, 2.5vw, 2.8rem);
+  margin-bottom: 1.5vh;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.category h2 {
+font-family: "Roboto Slab", serif;
+  font-weight: 900;
+   color: #333;
+  text-align: center;
+  font-size: clamp(0.7rem, 2.5vw, 2.8rem);
+  margin-bottom: 1.5vh;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
 }
 
 /* ITEMS GRID */
 .items {
   flex: 1;
-  display: grid;
-  gap: 1vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5vh;
+  align-items: start;
 }
 
-/* ITEM */
+/* Container for image and prices */
+.item > img {
+  width: 120px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0;
+  scale: 1.5;
+  margin-bottom: 22px;
+}
+
+/* Price sides container */
 .item {
-  background: #f8f8f8;
-  border-radius: 14px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 0.5vh;
+  align-items: center;
+  padding: 1vh;
 }
 
 .item img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+  grid-column: 2;
+  grid-row: 1;
 }
 
-.info {
+.price-side:first-of-type {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.price-side:last-of-type {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.item-name {
+  grid-column: 1 / -1;
+  grid-row: 2;
   text-align: center;
-  padding: 0.5vh;
 }
 
-.info h4 {
-  margin: 0;
-  font-size: clamp(0.8rem, 1vw, 1.2rem);
+/* Price Side Styling */
+.price-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5vh;
+  padding: 0 0.3vw;
 }
 
-.info p {
-  margin-top: 0.3vh;
+.price-label {
+  font-size: clamp(0.5rem, 0.8vw, 0.9rem);
+  font-weight: 700;
+  color: #8b5a2b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.2vh;
+}
+
+.price-circle {
+  background: white;
+  border-radius: 50%;
+  width: clamp(28px, 3vw, 45px);
+  height: clamp(28px, 3vw, 45px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: clamp(0.65rem, 1vw, 1.1rem);
+  color: #333;
+}
+
+/* Item Name */
+.item-name h4 {
+  margin: 0.5vh 0 0;
+  font-size: clamp(0.75rem, 1.1vw, 1.3rem);
   font-weight: 600;
-  font-size: clamp(0.7rem, 0.9vw, 1rem);
+  color: #333;
+  text-align: center;
+  line-height: 1.2;
 }
+

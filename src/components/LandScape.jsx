@@ -73,6 +73,7 @@ const LandScape = () => {
 
   // Auto horizontal scroll
   useEffect(() => {
+
     const interval = setInterval(() => {
       setCurrent((prev) =>
         prev === sections.length - 1 ? 0 : prev + 1
@@ -84,11 +85,11 @@ const LandScape = () => {
 
   return (
     <div className="slider-container">
-
-        <div className="topheader">
+      <div className="topheader landscape">
         <img className="logo" src="/logo.png" alt="Cafe logo" />
         <h1 className="title">MENU</h1>
       </div>
+      
       <div
         className="slider"
         style={{
@@ -99,7 +100,7 @@ const LandScape = () => {
           <div key={index} className="section">
             {section.map((category) => (
               <div key={category.id} className="category">
-                <h2>{category.name}</h2>
+                <h2 className="catname">{category.name}</h2>
 
                 <div
                   className="items"
@@ -111,17 +112,35 @@ const LandScape = () => {
                 >
                   {category.items.map((item) => (
                     <div key={item.id} className="item">
+                      {/* Small Price - Left Side */}
+                      <div className="price-side">
+                        <span className="price-label">SMALL</span>
+                        <div className="price-circle">
+                          {item.sizes?.small || '-'}
+                        </div>
+                      </div>
 
-
-                        
+                      {/* Image */}
                       <img
                         src={`${item.image}?w=400&h=400&fit=crop&q=70&auto=format`}
                         alt={item.name}
                       />
+
+                      {/* Large Price - Right Side */}
+                      <div className="price-side">
+                        <span className="price-label">LARGE</span>
+                        <div className="price-circle">
+                          {item.sizes?.large || '-'}
+                        </div>
+                      </div>
+                      
+                      {/* Item Name Below */}
+                      <div className="item-name">
+                        <h4>{item.name}</h4>
+                      </div>
                     </div>
                   ))}
                 </div>
-
               </div>
             ))}
           </div>
