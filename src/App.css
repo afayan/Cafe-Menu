@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -13,18 +13,20 @@ body {
 
 /* HEADER */
 
-
-.landscape .logo{
- height: 20%;
+.landscape .logo {
+  height: 20%;
   width: auto;
 }
 
 .title {
-  margin: 0;
-  font-size: 32px;
-  letter-spacing: 2px;
-  background-color: var(--lightprimary);
-  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--heading);
+  font-family: "Arapey", serif;
+   width: 100%;
+   font-size: 70px;
+   margin: 0%;
+   margin-block: 30px;
+   letter-spacing: -1px;
+
 }
 
 /* FULL SCREEN HORIZONTAL */
@@ -62,10 +64,10 @@ body {
   overflow: hidden;
 }
 
-.catname{
-font-family: "Roboto Slab", serif;
+.catname {
+  font-family: "Roboto Slab", serif;
   font-weight: 700;
-   color: #333;
+  color: #333;
   text-align: center;
   font-size: clamp(1.2rem, 2.5vw, 2.8rem);
   margin-bottom: 1.5vh;
@@ -78,9 +80,9 @@ font-family: "Roboto Slab", serif;
 }
 
 .category h2 {
-font-family: "Roboto Slab", serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 900;
-   color: #333;
+  color: #333;
   text-align: center;
   font-size: clamp(0.7rem, 2.5vw, 2.8rem);
   margin-bottom: 1.5vh;
@@ -182,33 +184,69 @@ font-family: "Roboto Slab", serif;
   line-height: 1.2;
 }
 
-
-
 /* FOOTER */
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
+.addonsBar {
+  position: fixed;
+  bottom: -1px;
+  left: 0;
+  right: 0;
 
-  background: #d8cfc2;
-  padding: 1vh 4vw;
+  height: 60px;
+  padding: 8px 10px;
 
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
 
-  font-size: clamp(0.7rem, 1vw, 1.2rem);
-  font-weight: 500;
+  background: var(--lightprimary);
+
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
 }
 
-.footer-left,
-.footer-right {
-  display: flex;
-  gap: 2vw;
-  align-items: center;
-}
-
-.footer-title {
+.col {
+  line-height: 1.4;
+  width: max-content;
   font-weight: 700;
+  margin-inline: 5px;
+}
+
+.titleCol {
+  font-weight: 900;
+  width: max-content;
+}
+
+.rightCol {
+  text-align: right;
+}
+
+.col strong {
+  font-weight: 900;
+  margin-left: 6px;
+}
+
+@media (max-width: 500px) {
+.titleCol {
+  font-size: 10px;
+}
+
+.col {
+  font-size: 7px;
+}
+
+.title {
+    margin: 0;
+    margin-top: 10px;
+  font-size: 50px;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
   letter-spacing: 1px;
+  color: var(--heading);
+  font-family: "Arapey", serif;
+   width: 100%;
+   letter-spacing: -1px;
+
+}
+
 }

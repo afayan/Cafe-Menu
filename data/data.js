@@ -93,7 +93,7 @@ export const menuData = {
           name: "Matcha Latte",
           sizes: { small: 190, large: 230 },
           image:
-            "https://png.pngtree.com/png-clipart/20250427/original/pngtree-delicious-chocolate-milkshake-with-oreo-cookies-perfect-for-a-cafe-menu-png-image_20845722.png",
+            "https://png.pngtree.com/png-clipart/20250711/original/pngtree-refreshing-iced-matcha-latte-in-a-clear-plastic-cup-with-ice-png-image_21303477.png",
         },
         {
           id: 302,

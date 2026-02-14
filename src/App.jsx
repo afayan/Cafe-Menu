@@ -18,20 +18,25 @@ const App = () => {
 
   return <>
   {isPortrait ? <Portrait /> : <LandScape />}
+<div className="addonsBar">
+  <div className="col titleCol">ADD ONS</div>
 
-  <div className="footer">
-  <div className="footer-left">
-    <span className="footer-title">ADD ONS</span>
-    <span>Nata <strong>₱5</strong></span>
-    <span>Crushed Oreo <strong>₱10</strong></span>
+  <div className="col">
+    Nata <strong>₱5</strong><br />
+    Crashed Oreo <strong>₱10</strong>
   </div>
 
-  <div className="footer-right">
-    <span>Coffee Jelly <strong>₱10</strong></span>
-    <span>Extra Coffee <strong>₱10</strong></span>
-    <span>Upsize to Large <strong>+₱20</strong></span>
+  <div className="col">
+    Coffee Jelly <strong>₱10</strong><br />
+    Extra Coffee <strong>₱10</strong>
+  </div>
+
+  <div className="col rightCol">
+    Upsize to Large <strong>+₱20</strong>
   </div>
 </div>
+
+
 
   </>
   
