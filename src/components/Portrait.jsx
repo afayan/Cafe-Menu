@@ -7,6 +7,11 @@ const LARGE_THRESHOLD = 10;
 
 function Portrait() {
   const containerRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+
+
+
 
   /* ---------------------------------------
      1️⃣  Responsive MAX ITEMS PER PAGE
@@ -113,6 +118,30 @@ function Portrait() {
     return () => clearInterval(interval);
   }, [pages.length]);
 
+    useEffect(() => {
+  const container = containerRef.current;
+  if (!container || pages.length <= 1) return;
+
+  const interval = setInterval(() => {
+    setCurrentIndex((prev) =>
+      prev === pages.length - 1 ? 0 : prev + 1
+    );
+  }, AUTO_TIME);
+
+  return () => clearInterval(interval);
+}, [pages.length]);
+
+
+useEffect(() => {
+  const container = containerRef.current;
+  if (!container) return;
+
+  container.scrollTo({
+    left: container.clientWidth * currentIndex,
+    behavior: "smooth",
+  });
+}, [currentIndex]);
+
 
   return (
     <div className="menuRoot">
@@ -177,6 +206,30 @@ function Portrait() {
             </div>
           </div>
         ))}
+
+        
+        {/* <div className="sliderControls">
+  <button
+    onClick={() =>
+      setCurrentIndex((prev) =>
+        prev === 0 ? pages.length - 1 : prev - 1
+      )
+    }
+  >
+    ◀
+  </button>
+
+  <button
+    onClick={() =>
+      setCurrentIndex((prev) =>
+        prev === pages.length - 1 ? 0 : prev + 1
+      )
+    }
+  >
+    ▶
+  </button>
+</div> */}
+
       </div>
     </div>
   );

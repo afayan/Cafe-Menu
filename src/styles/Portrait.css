@@ -45,7 +45,7 @@
  gap: 20px;
  border-top: 1px solid var(--heading);
  padding-top: 20px;
-row-gap: 10px;
+row-gap: 0px;
 }
 
 .card {
