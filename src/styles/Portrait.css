@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap');
+
+.menuRoot {
+  min-height: 100vh;
+  color: #1b1b1b;
+}
+
+.topheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  width: 1005;
+  text-align: center;
+}
+
+.logo {
+  width: 30vw;
+  height: auto;
+  position: absolute;
+}
+
+.title {
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: 1px;
+  color: var(--heading);
+  font-family: "Arapey", serif;
+   width: 100%;
+   margin-top: 30px;
+}
+
+.itemscontainer {
+  display: grid;
+  gap: 22px;
+  background-color: var(--primary);
+  width: 100vw;
+}
+
+.category{
+  background-color: var(--lightprimary);
+  margin: 0%;
+  border-radius: 0%;
+  padding: 0%;
+}
+
+.categoryTitle {
+  margin: 0 0 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ justify-content: center;
+ gap: 20px;
+ border-top: 1px solid var(--heading);
+ padding-top: 20px;
+row-gap: 10px;
+}
+
+.card {
+  overflow: hidden;
+  display: flex;
+  width: max-content;
+}
+
+.img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  height: 80px;
+  width: 50px;
+  scale: 1.3;
+}
+
+.itemname{
+  text-align: center;
+  margin: 0%;
+}
+
+.pricecontainer{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.pricecontainer p{
+  font-weight: 700;
+  font-size: 0.1em;
+  text-align: center;
+  margin-top: auto;
+}
+
+.pricetag{
+  background-color: rgb(255, 255, 255);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.5em;
+  z-index: 9;
+}
+
+.itemname {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.2;
+  width: 1005;
+  text-align: center;
+}
+
+.darkbg{
+  background-color: var(--darkprimary);
+}
