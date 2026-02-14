@@ -16,7 +16,25 @@ const App = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return isPortrait ? <Portrait /> : <LandScape />;
+  return <>
+  {isPortrait ? <Portrait /> : <LandScape />}
+
+  <div className="footer">
+  <div className="footer-left">
+    <span className="footer-title">ADD ONS</span>
+    <span>Nata <strong>₱5</strong></span>
+    <span>Crushed Oreo <strong>₱10</strong></span>
+  </div>
+
+  <div className="footer-right">
+    <span>Coffee Jelly <strong>₱10</strong></span>
+    <span>Extra Coffee <strong>₱10</strong></span>
+    <span>Upsize to Large <strong>+₱20</strong></span>
+  </div>
+</div>
+
+  </>
+  
 };
 
 export default App;

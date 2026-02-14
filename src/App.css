@@ -13,6 +13,7 @@ body {
 
 /* HEADER */
 
+
 .landscape .logo{
  height: 20%;
   width: auto;
@@ -48,7 +49,7 @@ body {
   padding: 3vh 4vw;
   display: grid;
   gap: 2vh;
-  background-color: var(--lightprimary);
+  background-color: var(--darkprimary);
 }
 
 /* CATEGORY */
@@ -70,6 +71,10 @@ font-family: "Roboto Slab", serif;
   margin-bottom: 1.5vh;
   text-transform: uppercase;
   letter-spacing: 1px;
+
+  background-color: var(--darkprimary);
+  margin: 0%;
+  margin-bottom: 0% !important;
 }
 
 .category h2 {
@@ -81,7 +86,6 @@ font-family: "Roboto Slab", serif;
   margin-bottom: 1.5vh;
   text-transform: uppercase;
   letter-spacing: 1px;
-  
 }
 
 /* ITEMS GRID */
@@ -90,8 +94,10 @@ font-family: "Roboto Slab", serif;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1.5vh;
+  gap: 40px;
   align-items: start;
+  row-gap: 0px;
+  background-color: var(--darkprimary);
 }
 
 /* Container for image and prices */
@@ -148,7 +154,6 @@ font-family: "Roboto Slab", serif;
 .price-label {
   font-size: clamp(0.5rem, 0.8vw, 0.9rem);
   font-weight: 700;
-  color: #8b5a2b;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 0.2vh;
@@ -177,3 +182,33 @@ font-family: "Roboto Slab", serif;
   line-height: 1.2;
 }
 
+
+
+/* FOOTER */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+
+  background: #d8cfc2;
+  padding: 1vh 4vw;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: clamp(0.7rem, 1vw, 1.2rem);
+  font-weight: 500;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+}
+
+.footer-title {
+  font-weight: 700;
+  letter-spacing: 1px;
+}

@@ -38,21 +38,7 @@ export const menuData = {
           sizes: { small: 230, large: 270 },
           image:
             "https://www.mcdonalds.com.pk/wp-content/uploads/2022/08/Chocolate-Oreo-Frappe.png",
-        },
-             {
-          id: 101,
-          name: "Mocha",
-          sizes: { small: 180, large: 220 },
-          image:
-            "https://png.pngtree.com/png-clipart/20250619/original/pngtree-creamy-oreo-milkshake-with-toppings-png-image_21213060.png",
-        },
-        {
-          id: 102,
-          name: "Caramel Latte",
-          sizes: { small: 200, large: 240 },
-          image:
-            "https://www.pngall.com/wp-content/uploads/18/Frappe-Oreo-Flavorful-Blended-Coffee-Experience-PNG.png",
-        },
+        }
       ],
     },
 
