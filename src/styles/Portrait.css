@@ -20,6 +20,7 @@
   height: auto;
   position: absolute;
   background-color: var(--lightprimary);
+  scale: 1.2;;
 }
 
 .itemscontainer {
